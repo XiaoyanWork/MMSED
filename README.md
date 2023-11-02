@@ -9,4 +9,4 @@ The codes for processing the data and creating social stream are at './ReIMvent/
 
 
 ## Pre-trained Models
-Download the pre-trained models from [Hugging face](https://huggingface.co/) and change their directories in the code.
+Download the pre-trained models from [HuggingFace](https://huggingface.co/) and change their directories in the code.
