@@ -1,5 +1,4 @@
 # ReIMvent
-
 This repository is for paper "Reinforced and Incremental Multimodal Social Event Detection".
 
 
