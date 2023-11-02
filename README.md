@@ -5,4 +5,5 @@ This repository is for paper "Reinforced and Incremental Multimodal Social Event
 
 ## Dataset
 The CrisisMMD dataset version 2.0 can be downloaded from [CrisisMMD](https://crisisnlp.qcri.org/crisismmd.html).
-Codes for processing the data and creat social stream is at './ReIMvent/data'.
+
+The codes for processing the data and creating social stream are at './ReIMvent/data'.
