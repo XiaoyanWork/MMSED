@@ -70,7 +70,7 @@ def get_img_data(datas, root_path):
         for i in data['image_path']:
             img_path = os.path.join(root_path, i)
             img_data = load_img(img_path)
-            all_img_data[img_path] = img_data
+            all_img_data[i] = img_data
 
     return all_img_data
 
