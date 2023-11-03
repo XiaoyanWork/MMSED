@@ -12,7 +12,7 @@ transform = transforms.Compose([
                          (0.214, 0.207, 0.207))]
 )
 
-data_path = '/nfs/yxy/multi-modal-ED_data/CrisisMMD/CrisisMMD'
+data_path = ''
 text_path = os.path.join(data_path, 'annotations')
 
 
