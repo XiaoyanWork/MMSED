@@ -24,8 +24,10 @@ def get_model(args):
         model = OWSEC_Model(args)
     elif args.method == 'ViLT':
         model = ViLT_Model(args)
-    elif args.method in ['ReIMvent', 'ReIMvent_k', 'ReIMvent_t']:
+    elif args.method in ['ReIMvent', 'ReIMvent_k']:
         model = ReIMvent_Model(args)
+    elif args.method == 'ReIMvent_t':
+        model = ReIMvent_Text_Model(args)
     else:
         raise ValueError(f"Invalid method: {args.method}")
 
