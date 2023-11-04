@@ -7,7 +7,6 @@ from baselines.SSECBD import SSE_CBD_Model
 from baselines.ViLT import ViLT_Model
 
 from ReIMvent.reimvent_model import ReIMvent_Model
-from ReIMvent.reimvent_text_model import ReIMvent_Text_Model
 
 
 def get_model(args):
@@ -25,10 +24,8 @@ def get_model(args):
         model = OWSEC_Model(args)
     elif args.method == 'ViLT':
         model = ViLT_Model(args)
-    elif args.method in ['ReIMvent', 'ReIMvent_k']:
+    elif args.method in ['ReIMvent', 'ReIMvent_k', 'ReIMvent_t']:
         model = ReIMvent_Model(args)
-    elif args.method == 'ReIMvent_t':
-        model = ReIMvent_Text_Model(args)
     else:
         raise ValueError(f"Invalid method: {args.method}")
 
