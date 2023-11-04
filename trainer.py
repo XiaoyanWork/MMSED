@@ -37,7 +37,7 @@ class Trainer(object):
         self.cluster_friendly = npc_Loss(self.args)
         
         self.spec_clus = SpectralClustering(n_clusters=self.args.label_num, affinity='nearest_neighbors')
-        self.kmeas = KMeans(n_clusters=self.args.label_num, n_init=10)
+        self.kmeans = KMeans(n_clusters=self.args.label_num, n_init=10)
         
         self._initial_params()
         
@@ -307,12 +307,10 @@ class Trainer(object):
                 all_data.extend(batch_feature_out.tolist())
                 all_label.extend(batch_label_ids.tolist())
         
-        if args.clustering_method == 'kmeans':
-            cluster_pred = self.kmeas.fit_predict(all_data)
-        elif args.clustering_method == 'spectral':
+        if self.args.method in ['ReIMvent', 'ReIMvent_t']:
             cluster_pred = self.spec_clus.fit_predict(all_data)
         else:
-            raise ValueError(f"Invalid clustering method: {args.clustering_method}")
+            cluster_pred = self.kmeans.fit_predict(all_data)
             
         NMI_value = normalized_mutual_info_score(all_label, cluster_pred)
         AMI_value = adjusted_mutual_info_score(all_label, cluster_pred)
