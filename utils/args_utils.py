@@ -9,7 +9,7 @@ def get_args():
     parser.add_argument('--method', type=str, default='ReIMvent', choices=['BERT', 'BERT_ResNet', 'CLIP', 'ViLT', 
                                                                            'DRMM', 'SSE_CBD', 'OWSEC', 'ReIMvent', 
                                                                            'ReIMvent_t', 'ReIMvent_k'])
-    parser.add_argument('--ablation', type=str, default='idfd_cel', choices=['none', 'wo_rgs', 'wo_cf', 'wo_tri',
+    parser.add_argument('--ablation', type=str, default='none', choices=['none', 'wo_rgs', 'wo_cf', 'wo_tri',
                                                                              'wo_idfd', 'cel', 'idfd_cel'])
     parser.add_argument('--tokenizer', type=str, default='CLIP', choices=['CLIP', 'BERT'])
     parser.add_argument('--block_num', type=int, default=9)
